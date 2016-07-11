@@ -34,7 +34,7 @@ monit:
 
 	uwsgimonitor:
 		check process uwsgi with pidfile /var/run/uwsgi.pid
-		  start program = "/usr/local/bin/uwsgi --emperor /var/www/html/stockmaster/conf/uwsgi.ini --daemonize /var/run/uwsgidaemon --pidfile /var/run/uwsgi.pid"
+		  start program = "/usr/local/bin/uwsgi --emperor /var/www/html/site/conf/uwsgi.ini --daemonize /var/run/uwsgidaemon --pidfile /var/run/uwsgi.pid"
 		  stop program = "/usr/local/bin/uwsgi --stop /var/run/uwsgi.pid"
 		  restart program = "/usr/local/bin/uwsgi --reload /var/run/uwsgi.pid"
 		  group nginx
